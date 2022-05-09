@@ -92,7 +92,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.app [dependencies]">
+  <component name="RunManager" selected="Gradle.app [run]">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hexlet.code.App" />
       <module name="app.main" />
@@ -192,10 +192,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.app [run]" />
         <item itemvalue="Gradle.app [dependencies]" />
         <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="Gradle.app [installDist]" />
-        <item itemvalue="Gradle.app [run]" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
