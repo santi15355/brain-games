@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4998dbff-a0b9-4c15-8c8e-f68b8dcd3d4b" name="Changes" comment="" />
+    <list default="true" id="4998dbff-a0b9-4c15-8c8e-f68b8dcd3d4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/Even.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Cli.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/Cli.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,13 +98,13 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.app [run]">
+  <component name="RunManager" selected="Gradle.app [installDist]">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hexlet.code.App" />
       <module name="app.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hexlet.code.*" />
+          <option name="PATTERN" value="hexlet.code.Even" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.app [run]" />
-        <item itemvalue="Gradle.app [dependencies]" />
-        <item itemvalue="Gradle.app [checkstyleMain]" />
         <item itemvalue="Gradle.app [installDist]" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="Gradle.app [run]" />
+        <item itemvalue="Gradle.app [checkstyleMain]" />
+        <item itemvalue="Gradle.app [dependencies]" />
+        <item itemvalue="Application.hexlet.code.App" />
       </list>
     </recent_temporary>
   </component>
