@@ -5,4 +5,4 @@
 
 <a href="https://codeclimate.com/github/santi15355/java-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
-https://asciinema.org/a/shXdUYbBKEsqxg1rby48a8Rdv
+https://asciinema.org/a/IVKnp9JHjERfLqL10Z9HNfz1F
