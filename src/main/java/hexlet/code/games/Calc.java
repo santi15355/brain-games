@@ -1,12 +1,11 @@
 package hexlet.code.games;
 
 import static hexlet.code.Engine.getIndex;
-import static hexlet.code.Engine.printLooserText;
 import static hexlet.code.Engine.getRandomNumberMax;
 import static hexlet.code.Engine.getRandomNumberMin;
 import static hexlet.code.Engine.getRoundsToWin;
-import static hexlet.code.Engine.getScoreToWin;
 import static hexlet.code.Engine.getUserInput;
+import static hexlet.code.Engine.printLooserText;
 import static hexlet.code.Engine.printWinnerText;
 
 public class Calc {
@@ -14,7 +13,7 @@ public class Calc {
         var result = 0;
         final var count = 3;
         System.out.println("What is the result of the expression?");
-        var scoreToWin = getScoreToWin();
+        var scoreToWin = 0;
         for (var i = 0; i < getIndex(); i++) {
             int randomNumber1 = getRandomNumberMax();
             int randomNumber2 = getRandomNumberMin();
