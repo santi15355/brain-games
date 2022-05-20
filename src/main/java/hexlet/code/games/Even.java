@@ -3,7 +3,7 @@ package hexlet.code.games;
 import static hexlet.code.Engine.printCorrect;
 import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.printLooserText;
-import static hexlet.code.Engine.getRandomNumberMax;
+import static hexlet.code.Engine.getRandomNumberMaxfrom1to99;
 import static hexlet.code.Engine.getRoundsToWin;
 import static hexlet.code.Engine.getUserInput;
 import static hexlet.code.Engine.printWinnerText;
@@ -14,7 +14,7 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         var scoreToWin = 0;
         for (var i = 0; i < getIndex(); i++) {
-            int randomNumber = getRandomNumberMax();
+            int randomNumber = getRandomNumberMaxfrom1to99();
             int isEven = randomNumber % 2;
             System.out.println("Question: " + randomNumber);
             printYourAnswer();

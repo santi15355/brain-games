@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.printLooserText;
-import static hexlet.code.Engine.getRandomNumberMax;
-import static hexlet.code.Engine.getRandomNumberMin;
+import static hexlet.code.Engine.getRandomNumberMaxfrom1to99;
+import static hexlet.code.Engine.getRandomNumberMinFrom5to10;
 import static hexlet.code.Engine.getRoundsToWin;
 import static hexlet.code.Engine.getUserInput;
 import static hexlet.code.Engine.printWinnerText;
@@ -16,8 +16,8 @@ public class GCD {
         var gcd = 0;
         System.out.println("Find the greatest common divisor of given numbers.");
         for (var i = 0; i < getIndex(); i++) {
-            int randomNumber1 = getRandomNumberMin();
-            int randomNumber2 = getRandomNumberMax();
+            int randomNumber1 = getRandomNumberMinFrom5to10();
+            int randomNumber2 = getRandomNumberMaxfrom1to99();
             System.out.println("Question: " + randomNumber2 + " " + randomNumber1);
             printYourAnswer();
             int userAnswer = getUserInput().nextInt();

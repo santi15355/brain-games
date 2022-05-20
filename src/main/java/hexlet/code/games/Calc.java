@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
 import static hexlet.code.Engine.getIndex;
-import static hexlet.code.Engine.getRandomNumberMax;
-import static hexlet.code.Engine.getRandomNumberMin;
+import static hexlet.code.Engine.getRandomNumberMaxfrom1to99;
+import static hexlet.code.Engine.getRandomNumberMinFrom5to10;
 import static hexlet.code.Engine.getRoundsToWin;
 import static hexlet.code.Engine.getUserInput;
 import static hexlet.code.Engine.printLooserText;
@@ -15,8 +15,8 @@ public class Calc {
         System.out.println("What is the result of the expression?");
         var scoreToWin = 0;
         for (var i = 0; i < getIndex(); i++) {
-            int randomNumber1 = getRandomNumberMax();
-            int randomNumber2 = getRandomNumberMin();
+            int randomNumber1 = getRandomNumberMaxfrom1to99();
+            int randomNumber2 = getRandomNumberMinFrom5to10();
             String[] mathOperators = {"+", "-", "*"};
             int j = (int) (Math.random() * count);
             switch (mathOperators[j]) {
