@@ -18,10 +18,10 @@ public class App {
         Scanner gameNumber = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter. \n1 - Greet \n2 - Even \n3 - Calc");
         System.out.println("4 - GCD \n5 - Progression \n0 - Exit");
-        int gameSelect = gameNumber.nextInt();
-        System.out.println("Your choice: " + gameSelect);
+        int gameSelector = gameNumber.nextInt();
+        System.out.println("Your choice: " + gameSelector);
         System.out.println();
-        switch (gameSelect) {
+        switch (gameSelector) {
             case one:
                 System.out.println(greeting);
                 Cli.userName();
