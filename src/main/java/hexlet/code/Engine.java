@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    static final int MIN_1 = 1;
+    static final int MIN_1 = 2;
     static final int MIN_2 = 5;
     static final int MIN_3 = 10;
     static final int MAX = 99;
