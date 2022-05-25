@@ -34,7 +34,7 @@ public class Calc {
                     break;
                 default:
             }
-            System.out.println("Question: " + randomNumber1 + " " + mathOperators[j] + " " + randomNumber2);
+            System.out.println("Question:" + " " + randomNumber1 + " " + mathOperators[j] + " " + randomNumber2);
             System.out.print("Your answer: ");
             int userAnswer = getUserInput().nextInt();
             if (userAnswer == result) {
