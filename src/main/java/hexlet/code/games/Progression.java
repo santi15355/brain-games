@@ -19,7 +19,7 @@ public class Progression {
         for (var i = 0; i < getIndex(); i++) {
             int[] progressions = getRandomMass();
             var massLength = progressions.length;
-            var missingNumberIndex = (int) (Math.random() * (massLength + 1));
+            var missingNumberIndex = (int) (Math.random() * massLength);
             var missingNumber = progressions[missingNumberIndex];
             String[] progressionsToString = new String[massLength];
             for (var j = 0; j < massLength; j++) {
