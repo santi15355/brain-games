@@ -7,7 +7,7 @@ import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.printLooserText;
 import static hexlet.code.Engine.getRandomNumberFrom1to99;
 import static hexlet.code.Engine.getRoundsToWin;
-import static hexlet.code.Engine.getUserInput;
+import static hexlet.code.Engine.getUserAnswer;
 import static hexlet.code.Engine.printWinnerText;
 import static hexlet.code.Engine.printYourAnswer;
 
@@ -22,7 +22,7 @@ public class Prime {
             var randomNumber = getRandomNumberFrom1to99();
             System.out.println("Question: " + randomNumber);
             printYourAnswer();
-            String userAnswer = getUserInput().nextLine();
+            String userAnswer = getUserAnswer();
             userAnswer = userAnswer.toLowerCase();
             for (var k = 2; k < randomNumber; k++) {
                 isPrime = randomNumber % k;

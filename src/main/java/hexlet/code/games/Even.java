@@ -7,7 +7,6 @@ import static hexlet.code.Engine.printCorrect;
 import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.getRandomNumberFrom1to99;
 import static hexlet.code.Engine.getRoundsToWin;
-import static hexlet.code.Engine.getUserInput;
 import static hexlet.code.Engine.printWinnerText;
 import static hexlet.code.Engine.printYourAnswer;
 
@@ -22,12 +21,12 @@ public class Even {
             int isEven = randomNumber % 2;
             System.out.println("Question: " + randomNumber);
             printYourAnswer();
-            userAnswer = getUserInput().nextLine().toLowerCase();
+            userAnswer = Engine.getUserAnswer().toLowerCase();
             if ((isEven == 0 & userAnswer.equals("yes")) | (isEven != 0 & userAnswer.equals("no"))) {
                 printCorrect();
                 scoreToWin++;
             } else {
-                Engine.test();
+                Engine.printFailText();
                 break;
             }
         }

@@ -6,7 +6,7 @@ import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.getRandomMass;
 import static hexlet.code.Engine.printLooserText;
 import static hexlet.code.Engine.getRoundsToWin;
-import static hexlet.code.Engine.getUserInput;
+import static hexlet.code.Engine.getUserAnswer;
 import static hexlet.code.Engine.printWinnerText;
 import static hexlet.code.Engine.printYourAnswer;
 import static hexlet.code.Engine.printCorrect;
@@ -29,7 +29,7 @@ public class Progression {
             String progressionsToPrint = String.join(" ", progressionsToString);
             System.out.println("Question:" + " " + progressionsToPrint);
             printYourAnswer();
-            int userAnswer = getUserInput().nextInt();
+            int userAnswer = Integer.parseInt(getUserAnswer());
             if (userAnswer == missingNumber) {
                 printCorrect();
                 scoreToWin++;

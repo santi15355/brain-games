@@ -6,7 +6,7 @@ import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.getRandomNumberFrom1to99;
 import static hexlet.code.Engine.getRandomNumberFrom5to10;
 import static hexlet.code.Engine.getRoundsToWin;
-import static hexlet.code.Engine.getUserInput;
+import static hexlet.code.Engine.getUserAnswer;
 import static hexlet.code.Engine.printLooserText;
 import static hexlet.code.Engine.printWinnerText;
 
@@ -36,7 +36,7 @@ public class Calc {
             }
             System.out.println("Question: " + randomNumber1 + " " + mathOperators[j] + " " + randomNumber2);
             System.out.print("Your answer: ");
-            int userAnswer = getUserInput().nextInt();
+            int userAnswer = Integer.parseInt(getUserAnswer());
             if (userAnswer == result) {
                 System.out.println("Correct!");
                 scoreToWin++;

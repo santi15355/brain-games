@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Scanner;
 
@@ -11,6 +12,7 @@ public class Engine {
     static final int MAX = 99;
     static final int ROUNDS_TO_WIN = 3;
     static final int INDEX = 3;
+    private static String userAnswer;
     private static int randomNumberMin;
     private static int randomNumberMax;
     private static Scanner userInput = new Scanner(System.in);
@@ -27,32 +29,26 @@ public class Engine {
         randomNumberMin = MIN_2 + (int) (Math.random() * (MIN_3 - MIN_2 + 1));
         return randomNumberMin;
     }
-
     public static int getRandomNumberFrom1to99() {
         randomNumberMax = MIN_1 + (int) (Math.random() * MAX);
         return randomNumberMax;
     }
-
-    public static Scanner getUserInput() {
-        return userInput;
+    public static String getUserAnswer() {
+        userAnswer = userInput.nextLine();
+        return userAnswer;
     }
-
     public static void printWinnerText() {
         System.out.println("Congratulations, " + Cli.getName() + "!");
     }
-
     public static void printLooserText() {
         System.out.println("Let's try again, " + Cli.getName() + "!");
     }
-
     public static void printYourAnswer() {
         System.out.print("Your Answer: ");
     }
-
     public static void printCorrect() {
         System.out.println("Correct!");
     }
-
     public static int[] getRandomMass() {
         int randomLenght = getRandomNumberFrom5to10();
         var j = 0;
@@ -64,7 +60,7 @@ public class Engine {
         }
         return progressions;
     }
-    public static void test() {
+    public static void printFailText() {
         if (Even.getUserAnswer().equals("yes")) {
             System.out.println("'yes'" + " is wrong answer ;(. Correct answer was " + "'no'" + ".");
             printLooserText();
@@ -73,5 +69,9 @@ public class Engine {
             printLooserText();
         }
     }
+    public static void printFailText2() {
+        System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + GCD.getGCD());
+        printLooserText();
+        }
 }
 
