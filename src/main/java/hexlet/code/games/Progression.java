@@ -25,7 +25,7 @@ public class Progression {
             for (var j = 0; j < massLength; j++) {
                 progressionsToString[j] = Integer.toString(progressions[j]);
             }
-            progressionsToString[missingNumberIndex] = "...";
+            progressionsToString[missingNumberIndex] = "..";
             String progressionsToPrint = String.join(" ", progressionsToString);
             System.out.println("Question:" + " " + progressionsToPrint);
             printYourAnswer();
