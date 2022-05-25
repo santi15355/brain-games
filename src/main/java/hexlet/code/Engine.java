@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.Even;
+
 import java.util.Scanner;
 
 public class Engine {
@@ -61,6 +63,15 @@ public class Engine {
             j += randomProgressionNumber;
         }
         return progressions;
+    }
+    public static void test() {
+        if (Even.getUserAnswer().equals("yes")) {
+            System.out.println("'yes'" + " is wrong answer ;(. Correct answer was " + "'no'" + ".");
+            printLooserText();
+        } else if (Even.getUserAnswer().equals("no")) {
+            System.out.println("'no'" + " is wrong answer ;(. Correct answer was " + "'yes'" + ".");
+            printLooserText();
+        }
     }
 }
 
