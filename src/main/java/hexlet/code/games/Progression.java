@@ -27,7 +27,7 @@ public class Progression {
             }
             progressionsToString[missingNumberIndex] = "...";
             String progressionsToPrint = String.join(" ", progressionsToString);
-            System.out.println("Question: " + progressionsToPrint);
+            System.out.println("Question:" + " " + progressionsToPrint);
             printYourAnswer();
             int userAnswer = getUserInput().nextInt();
             if (userAnswer == missingNumber) {
