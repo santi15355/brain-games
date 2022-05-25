@@ -1,9 +1,11 @@
 package hexlet.code.games;
 
+import hexlet.code.Cli;
+
 import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.printLooserText;
-import static hexlet.code.Engine.getRandomNumberMaxfrom1to99;
-import static hexlet.code.Engine.getRandomNumberMinFrom5to10;
+import static hexlet.code.Engine.getRandomNumberFrom1to99;
+import static hexlet.code.Engine.getRandomNumberFrom5to10;
 import static hexlet.code.Engine.getRoundsToWin;
 import static hexlet.code.Engine.getUserInput;
 import static hexlet.code.Engine.printWinnerText;
@@ -12,12 +14,13 @@ import static hexlet.code.Engine.printCorrect;
 
 public class GCD {
     public static void gcdGame() {
+        Cli.greetUser();
         var scoreToWin = 0;
         var gcd = 0;
         System.out.println("Find the greatest common divisor of given numbers.");
         for (var i = 0; i < getIndex(); i++) {
-            int randomNumber1 = getRandomNumberMinFrom5to10();
-            int randomNumber2 = getRandomNumberMaxfrom1to99();
+            int randomNumber1 = getRandomNumberFrom5to10();
+            int randomNumber2 = getRandomNumberFrom1to99();
             System.out.println("Question: " + randomNumber2 + " " + randomNumber1);
             printYourAnswer();
             int userAnswer = getUserInput().nextInt();

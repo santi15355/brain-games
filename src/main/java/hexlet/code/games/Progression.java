@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Cli;
+
 import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.getRandomMass;
 import static hexlet.code.Engine.printLooserText;
@@ -11,9 +13,9 @@ import static hexlet.code.Engine.printCorrect;
 
 public class Progression {
     public static void progressionGame() {
+        Cli.greetUser();
         var scoreToWin = 0;
         System.out.println("What number is missing in the progression?");
-
         for (var i = 0; i < getIndex(); i++) {
             int[] progressions = getRandomMass();
             var massLength = progressions.length;
@@ -25,13 +27,9 @@ public class Progression {
             }
             progressionsToString[missingNumberIndex] = "...";
             String progressionsToPrint = String.join(" ", progressionsToString);
-            //System.out.println("missing number index= " + missingNumberIndex);
-            //System.out.println("missing number= " + missingNumber);
-            //System.out.println("native massive= " + Arrays.toString(progressions));
             System.out.println("Question: " + progressionsToPrint);
             printYourAnswer();
             int userAnswer = getUserInput().nextInt();
-
             if (userAnswer == missingNumber) {
                 printCorrect();
                 scoreToWin++;
@@ -43,8 +41,6 @@ public class Progression {
             if (scoreToWin == getRoundsToWin()) {
                 printWinnerText();
             }
-
-
         }
     }
 }

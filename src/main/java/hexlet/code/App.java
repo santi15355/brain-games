@@ -10,48 +10,37 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        final var one = 1;
-        final var two = 2;
-        final var three = 3;
-        final var four = 4;
-        final var five = 5;
-        final var six = 6;
-        String greeting = "Welcome to the Brain Games!";
+        System.out.println("Please enter the game number and press Enter.");
+        System.out.print("""
+                1 - Greet
+                2 - Even
+                3 - Calc
+                4 - GCD
+                5 - Progression
+                6 - Prime
+                0 Exit
+                """);
         Scanner gameNumber = new Scanner(System.in);
-        System.out.println("Please enter the game number and press Enter. \n1 - Greet \n2 - Even \n3 - Calc");
-        System.out.println("4 - GCD \n5 - Progression \n6 - Prime \n0 - Exit");
-        int gameSelector = gameNumber.nextInt();
-        System.out.println("Your choice: " + gameSelector);
-        System.out.println();
-        switch (gameSelector) {
-            case one:
-                System.out.println(greeting);
-                Cli.userName();
+        System.out.print("Your choice: ");
+        switch (gameNumber.nextLine()) {
+            case "1":
+                Cli.greetUser();
                 break;
-            case two:
-                System.out.println(greeting);
-                Cli.userName();
+            case "2":
                 Even.evenGame();
                 break;
-            case three:
-                System.out.println(greeting);
-                Cli.userName();
+            case "3":
                 Calc.calcGame();
                 break;
-            case four:
-                System.out.println(greeting);
-                Cli.userName();
+            case "4":
                 GCD.gcdGame();
                 break;
-            case five:
-                System.out.println(greeting);
-                Cli.userName();
+            case "5":
                 Progression.progressionGame();
                 break;
-            case six:
-                System.out.println(greeting);
-                Cli.userName();
+            case "6":
                 Prime.primeGame();
+                break;
             default:
                 break;
         }
