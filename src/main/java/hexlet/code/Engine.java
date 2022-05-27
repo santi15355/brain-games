@@ -1,7 +1,7 @@
 package hexlet.code;
 
-import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -33,7 +33,7 @@ public class Engine {
         randomNumberMax = MIN_1 + (int) (Math.random() * MAX);
         return randomNumberMax;
     }
-    public static String getUserAnswer() {
+    public static String getUserInput() {
         userAnswer = userInput.nextLine();
         return userAnswer;
     }
@@ -61,17 +61,21 @@ public class Engine {
         return progressions;
     }
     public static void printFailText() {
-        if (Even.getUserAnswer().equals("yes")) {
+        if (userAnswer.equals("yes")) {
             System.out.println("'yes'" + " is wrong answer ;(. Correct answer was " + "'no'" + ".");
             printLooserText();
-        } else if (Even.getUserAnswer().equals("no")) {
+        } else if (userAnswer.equals("no")) {
             System.out.println("'no'" + " is wrong answer ;(. Correct answer was " + "'yes'" + ".");
             printLooserText();
         }
     }
-    public static void printFailText2() {
+    public static void printLooserTextGCD() {
         System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + GCD.getGCD());
         printLooserText();
         }
+    public static void printLooserTextProgression() {
+        System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + Progression.getMissingNumber());
+        printLooserText();
+    }
 }
 

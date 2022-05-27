@@ -11,7 +11,6 @@ import static hexlet.code.Engine.printWinnerText;
 import static hexlet.code.Engine.printYourAnswer;
 
 public class Even {
-    private static String userAnswer;
     public static void evenGame() {
         Cli.greetUser();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
@@ -21,7 +20,7 @@ public class Even {
             int isEven = randomNumber % 2;
             System.out.println("Question: " + randomNumber);
             printYourAnswer();
-            userAnswer = Engine.getUserAnswer().toLowerCase();
+            String userAnswer = Engine.getUserInput().toLowerCase();
             if ((isEven == 0 & userAnswer.equals("yes")) | (isEven != 0 & userAnswer.equals("no"))) {
                 printCorrect();
                 scoreToWin++;
@@ -33,8 +32,5 @@ public class Even {
         if (scoreToWin == getRoundsToWin()) {
             printWinnerText();
         }
-    }
-    public static String getUserAnswer() {
-        return userAnswer;
     }
 }
