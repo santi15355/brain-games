@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Cli;
+import hexlet.code.Engine;
 
 import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.getRandomNumberFrom1to99;
@@ -20,9 +21,8 @@ public class Calc {
         for (var i = 0; i < getIndex(); i++) {
             int randomNumber1 = getRandomNumberFrom1to99();
             int randomNumber2 = getRandomNumberFrom5to10();
-            String[] mathOperators = {"+", "-", "*"};
-            int j = (int) (Math.random() * count);
-            switch (mathOperators[j]) {
+            String operator = Engine.getOperator();
+            switch (operator) {
                 case "+":
                     result = randomNumber1 + randomNumber2;
                     break;
@@ -34,7 +34,7 @@ public class Calc {
                     break;
                 default:
             }
-            System.out.println("Question: " + randomNumber1 + " " + mathOperators[j] + " " + randomNumber2);
+            System.out.println("Question: " + randomNumber1 + " " + operator + " " + randomNumber2);
             System.out.print("Your answer: ");
             int userAnswer = Integer.parseInt(getUserInput());
             if (userAnswer == result) {

@@ -77,5 +77,11 @@ public class Engine {
         System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + Progression.getMissingNumber());
         printLooserText();
     }
+    public static String getOperator() {
+        final var count = 3;
+        String[] mathOperators = {"+", "-", "*"};
+        int operator = (int) (Math.random() * count);
+        return mathOperators[operator];
+    }
 }
 
