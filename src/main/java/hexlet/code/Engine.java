@@ -72,7 +72,7 @@ public class Engine {
     public static void printLooserTextGCD() {
         System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + GCD.getGCD());
         printLooserText();
-        }
+    }
     public static void printLooserTextProgression() {
         System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + Progression.getMissingNumber());
         printLooserText();
