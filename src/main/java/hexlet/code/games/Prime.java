@@ -18,7 +18,7 @@ public class Prime {
         }
     }
 
-    private static boolean isPrime(int randomNumber) {
+    public static boolean isPrime(int randomNumber) {
         if (randomNumber < 2) {
             return false;
         }
