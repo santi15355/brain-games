@@ -1,10 +1,9 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.getRoundsCount;
 import static hexlet.code.Engine.getRandomNumberFrom1to99;
+import static hexlet.code.Engine.getRoundsCount;
 
 public class Even {
     public static void evenGame() {
