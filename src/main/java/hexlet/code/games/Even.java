@@ -11,7 +11,6 @@ public class Even {
         var question = 0;
         var answer = "";
         Engine.gameQuestion("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        Cli.greetUser();
         for (var i = 0; i < getRoundsCount(); i++) {
             question = getRandomNumberFrom1to99();
             answer = (question % 2 == 0) ? "yes" : "no";

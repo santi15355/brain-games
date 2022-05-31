@@ -18,14 +18,16 @@ public class Prime {
         }
     }
 
-    public static boolean isPrime(int randomNumber) {
+    private static boolean isPrime(int randomNumber) {
         if (randomNumber < 2) {
-            return false;
-        }
-
-        if (randomNumber % 2 == 0) {
             return true;
         }
-        return false;
+
+        for (int i = 2; i <= Math.sqrt(randomNumber); i++) {
+            if (randomNumber % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }

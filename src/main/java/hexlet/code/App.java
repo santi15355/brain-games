@@ -27,6 +27,7 @@ public class App {
                 Cli.greetUser();
                 break;
             case "2":
+                Cli.greetUser();
                 Even.evenGame();
                 break;
             case "3":
