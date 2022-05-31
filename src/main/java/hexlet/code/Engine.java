@@ -43,7 +43,10 @@ public class Engine {
     }
 
     public static void gameRun(String gameQuestion, String question, String answer) {
-        System.out.println(gameQuestion);
+        for (var i = 0; i < 1; i++) {
+            System.out.println(gameQuestion);
+            break;
+        }
         System.out.println("Question: " + question);
         System.out.print("Your answer: ");
         Scanner inputAnswer = new Scanner(System.in);

@@ -10,22 +10,24 @@ public class Prime {
         String answer = "";
         int question = 0;
         String gameQuestion = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
-        int isPrime;
-        int k = 2;
         for (var i = 0; i < getRoundsCount(); i++) {
-            var temp = 0;
             var randomNumber = getRandomNumberFrom1to99();
-            //System.out.println("Question: " + randomNumber);
-            for (k = 2; k < randomNumber; k++) {
-                isPrime = randomNumber % k;
-                if (isPrime == 0) {
-                    temp++;
-                    break;
-                }
-            }
             question = randomNumber;
-            answer = (temp == 0) ? "yes" : "no";
-            Engine.gameRun(gameQuestion, String.valueOf(question), String.valueOf(answer));
+            answer = isPrime(randomNumber) ? "no" : "yes";
+            Engine.gameRun(gameQuestion, String.valueOf(question), answer);
         }
+    }
+
+    private static boolean isPrime(int randomNumber) {
+        if (randomNumber < 2) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(randomNumber); i++) {
+            if (randomNumber % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
