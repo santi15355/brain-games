@@ -1,24 +1,18 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.getIndex;
-import static hexlet.code.Engine.getRandomMass;
-import static hexlet.code.Engine.getRoundsToWin;
-import static hexlet.code.Engine.getUserInput;
-import static hexlet.code.Engine.printWinnerText;
-import static hexlet.code.Engine.printYourAnswer;
-import static hexlet.code.Engine.printCorrect;
+import static hexlet.code.Engine.getRoundsCount;
 
 public class Progression {
-    private static int missingNumber;
+
     public static void progressionGame() {
-        Cli.greetUser();
-        var scoreToWin = 0;
-        System.out.println("What number is missing in the progression?");
-        for (var i = 0; i < getIndex(); i++) {
-            int[] progressions = getRandomMass();
+        int answer = 0;
+        String question = "";
+        String gameQuestion = "What number is missing in the progression?";
+        int missingNumber = 0;
+        for (var i = 0; i < getRoundsCount(); i++) {
+            int[] progressions = Progression.getRandomMass();
             var massLength = progressions.length;
             var missingNumberIndex = (int) (Math.random() * massLength);
             missingNumber = progressions[missingNumberIndex];
@@ -28,22 +22,21 @@ public class Progression {
             }
             progressionsToString[missingNumberIndex] = "..";
             String progressionsToPrint = String.join(" ", progressionsToString);
-            System.out.println("Question:" + " " + progressionsToPrint);
-            printYourAnswer();
-            int userAnswer = Integer.parseInt(getUserInput());
-            if (userAnswer == missingNumber) {
-                printCorrect();
-                scoreToWin++;
-            } else {
-                Engine.printLooserTextProgression();
-                break;
-            }
-            if (scoreToWin == getRoundsToWin()) {
-                printWinnerText();
-            }
+            question = progressionsToPrint;
+            answer = missingNumber;
+            Engine.gameRun(gameQuestion, question, String.valueOf(answer));
         }
     }
-    public static int getMissingNumber() {
-        return missingNumber;
+
+    public static int[] getRandomMass() {
+        int randomLenght = Engine.getRandomNumberFrom5to10();
+        var j = 0;
+        int[] progressions = new int[randomLenght];
+        int randomProgressionNumber = Engine.getRandomNumberFrom5to10();
+        for (var i = 0; i < progressions.length; i++) {
+            progressions[i] = j + randomProgressionNumber;
+            j += randomProgressionNumber;
+        }
+        return progressions;
     }
 }

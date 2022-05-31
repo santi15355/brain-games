@@ -30,15 +30,19 @@ public class App {
                 Even.evenGame();
                 break;
             case "3":
+                Cli.greetUser();
                 Calc.calcGame();
                 break;
             case "4":
+                Cli.greetUser();
                 GCD.gcdGame();
                 break;
             case "5":
+                Cli.greetUser();
                 Progression.progressionGame();
                 break;
             case "6":
+                Cli.greetUser();
                 Prime.primeGame();
                 break;
             default:

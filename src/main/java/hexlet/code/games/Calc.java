@@ -1,27 +1,21 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.getIndex;
 import static hexlet.code.Engine.getRandomNumberFrom1to99;
 import static hexlet.code.Engine.getRandomNumberFrom5to10;
-import static hexlet.code.Engine.getRoundsToWin;
-import static hexlet.code.Engine.getUserInput;
-import static hexlet.code.Engine.printLooserText;
-import static hexlet.code.Engine.printWinnerText;
+import static hexlet.code.Engine.getRoundsCount;
 
 public class Calc {
     public static void calcGame() {
-        Cli.greetUser();
-        var result = 0;
-        final var count = 3;
-        System.out.println("What is the result of the expression?");
-        var scoreToWin = 0;
-        for (var i = 0; i < getIndex(); i++) {
+        int result = 0;
+        int answer = 0;
+        String question = "";
+        String gameQuestion = "What is the result of the expression?";
+        for (var i = 0; i < getRoundsCount(); i++) {
             int randomNumber1 = getRandomNumberFrom1to99();
             int randomNumber2 = getRandomNumberFrom5to10();
-            String operator = Engine.getOperator();
+            String operator = Calc.getOperator();
             switch (operator) {
                 case "+":
                     result = randomNumber1 + randomNumber2;
@@ -34,20 +28,16 @@ public class Calc {
                     break;
                 default:
             }
-            System.out.println("Question: " + randomNumber1 + " " + operator + " " + randomNumber2);
-            System.out.print("Your answer: ");
-            int userAnswer = Integer.parseInt(getUserInput());
-            if (userAnswer == result) {
-                System.out.println("Correct!");
-                scoreToWin++;
-            } else {
-                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was " + result);
-                printLooserText();
-                break;
-            }
-            if (scoreToWin == getRoundsToWin()) {
-                printWinnerText();
-            }
+            question = randomNumber1 + " " + operator + " " + randomNumber2;
+            answer = result;
+            Engine.gameRun(gameQuestion, question, String.valueOf(answer));
         }
+    }
+
+    public static String getOperator() {
+        final var count = 3;
+        String[] mathOperators = {"+", "-", "*"};
+        int operator = (int) (Math.random() * count);
+        return mathOperators[operator];
     }
 }
