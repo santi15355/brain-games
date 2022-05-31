@@ -11,7 +11,7 @@ public class Calc {
         int result = 0;
         int answer = 0;
         String question = "";
-        String gameQuestion = "What is the result of the expression?";
+        Engine.gameQuestion("What is the result of the expression?");
         for (var i = 0; i < getRoundsCount(); i++) {
             int randomNumber1 = getRandomNumberFrom1to99();
             int randomNumber2 = getRandomNumberFrom5to10();
@@ -30,7 +30,7 @@ public class Calc {
             }
             question = randomNumber1 + " " + operator + " " + randomNumber2;
             answer = result;
-            Engine.gameRun(gameQuestion, question, String.valueOf(answer));
+            Engine.gameRun(question, String.valueOf(answer));
         }
     }
 

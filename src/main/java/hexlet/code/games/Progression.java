@@ -9,7 +9,7 @@ public class Progression {
     public static void progressionGame() {
         int answer = 0;
         String question = "";
-        String gameQuestion = "What number is missing in the progression?";
+        Engine.gameQuestion("What number is missing in the progression?");
         int missingNumber = 0;
         for (var i = 0; i < getRoundsCount(); i++) {
             int[] progressions = Progression.getRandomMass();
@@ -24,7 +24,7 @@ public class Progression {
             String progressionsToPrint = String.join(" ", progressionsToString);
             question = progressionsToPrint;
             answer = missingNumber;
-            Engine.gameRun(gameQuestion, question, String.valueOf(answer));
+            Engine.gameRun(question, String.valueOf(answer));
         }
     }
 

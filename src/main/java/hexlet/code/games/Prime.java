@@ -9,12 +9,12 @@ public class Prime {
     public static void primeGame() {
         String answer = "";
         int question = 0;
-        String gameQuestion = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
+        Engine.gameQuestion("Answer 'yes' if the number is prime, otherwise answer 'no'.");
         for (var i = 0; i < getRoundsCount(); i++) {
             var randomNumber = getRandomNumberFrom1to99();
             question = randomNumber;
-            answer = isPrime(randomNumber) ? "no" : "yes";
-            Engine.gameRun(gameQuestion, String.valueOf(question), answer);
+            answer = isPrime(randomNumber) ? "yes" : "no";
+            Engine.gameRun(String.valueOf(question), answer);
         }
     }
 
@@ -23,11 +23,9 @@ public class Prime {
             return false;
         }
 
-        for (int i = 2; i <= Math.sqrt(randomNumber); i++) {
-            if (randomNumber % i == 0) {
-                return false;
-            }
+        if (randomNumber % 2 == 0) {
+            return true;
         }
-        return true;
+        return false;
     }
 }

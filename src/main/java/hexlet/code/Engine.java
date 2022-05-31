@@ -10,9 +10,6 @@ public class Engine {
     static final int CONST_3 = 3;
 
     private static int countOfWin = 0;
-    private static int randomNumberMin;
-    private static int randomNumberMax;
-    private static Scanner userInput = new Scanner(System.in);
 
     public static void incrementCountOfWin() {
         if (countOfWin < CONST_3) {
@@ -24,29 +21,19 @@ public class Engine {
         return countOfWin;
     }
 
-    public static void resetCountOfWin() {
-        countOfWin = 0;
-    }
-
     public static int getRoundsCount() {
         return ROUNDS;
     }
 
     public static int getRandomNumberFrom5to10() {
-        randomNumberMin = CONST_5 + (int) ((Math.random() * (CONST_5 + 1)));
-        return randomNumberMin;
+        return CONST_5 + (int) ((Math.random() * (CONST_5 + 1)));
     }
 
     public static int getRandomNumberFrom1to99() {
-        randomNumberMax = (CONST_2 - 1) + (int) (Math.random() * CONST_99);
-        return randomNumberMax;
+        return (CONST_2 - 1) + (int) (Math.random() * CONST_99);
     }
 
-    public static void gameRun(String gameQuestion, String question, String answer) {
-        for (var i = 0; i < 1; i++) {
-            System.out.println(gameQuestion);
-            break;
-        }
+    public static void gameRun(String question, String answer) {
         System.out.println("Question: " + question);
         System.out.print("Your answer: ");
         Scanner inputAnswer = new Scanner(System.in);
@@ -65,5 +52,8 @@ public class Engine {
         if (getCountOfWin() == CONST_3) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
+    }
+    public static void gameQuestion(String gameQuestion) {
+        System.out.println(gameQuestion);
     }
 }
