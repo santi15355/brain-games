@@ -2,20 +2,19 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
+import static hexlet.code.Engine.ROUNDS;
 import static hexlet.code.Engine.getRandomNumberFrom1to99;
-import static hexlet.code.Engine.getRoundsCount;
 
 public class Prime {
     public static void primeGame() {
-        String answer = "";
-        int question = 0;
-        Engine.gameQuestion("Answer 'yes' if the number is prime, otherwise answer 'no'.");
-        for (var i = 0; i < getRoundsCount(); i++) {
+        String gameQuestion = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
+        String[][] gameData = new String[ROUNDS][ROUNDS];
+        for (var i = 0; i < ROUNDS; i++) {
             var randomNumber = getRandomNumberFrom1to99();
-            question = randomNumber;
-            answer = isPrime(randomNumber) ? "yes" : "no";
-            Engine.gameRun(String.valueOf(question), answer);
+            gameData[i][0] = String.valueOf(randomNumber);
+            gameData[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
+        Engine.gameRun(gameQuestion, gameData);
     }
 
     private static boolean isPrime(int randomNumber) {
