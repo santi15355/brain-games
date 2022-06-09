@@ -9,6 +9,7 @@ import static hexlet.code.Utils.getRandomNumberFrom5to10;
 public class Calc {
     public static void calcGame() {
         int result = 0;
+        String mathOperator = "";
         String gameQuestion = "What is the result of the expression?";
         String[][] gameData = new String[ROUNDS][ROUNDS];
         for (var i = 0; i < ROUNDS; i++) {
@@ -18,18 +19,19 @@ public class Calc {
             switch (operator) {
                 case 0:
                     result = randomNumber1 + randomNumber2;
-                    gameData[i][0] = randomNumber1 + " + " + randomNumber2;
+                    mathOperator = " + ";
                     break;
                 case 1:
                     result = randomNumber1 - randomNumber2;
-                    gameData[i][0] = randomNumber1 + " - " + randomNumber2;
+                    mathOperator = " - ";
                     break;
                 case 2:
                     result = randomNumber1 * randomNumber2;
-                    gameData[i][0] = randomNumber1 + " * " + randomNumber2;
+                    mathOperator = " * ";
                     break;
                 default:
             }
+            gameData[i][0] = randomNumber1 + mathOperator + randomNumber2;
             gameData[i][1] = String.valueOf(result);
         }
         Engine.gameRun(gameQuestion, gameData);
