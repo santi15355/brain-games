@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 import static hexlet.code.Engine.ROUNDS;
-import static hexlet.code.Engine.getRandomNumberFrom1to99;
+import static hexlet.code.Utils.getRandomNumberFrom1to99;
 
 public class Prime {
     public static void primeGame() {
