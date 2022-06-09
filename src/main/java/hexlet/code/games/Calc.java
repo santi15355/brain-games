@@ -17,19 +17,19 @@ public class Calc {
             int randomNumber2 = getRandomNumberFrom5to10();
             int operator = getRandomNumber();
             switch (operator) {
-                case 0:
+                case 0 -> {
                     result = randomNumber1 + randomNumber2;
                     mathOperator = " + ";
-                    break;
-                case 1:
+                }
+                case 1 -> {
                     result = randomNumber1 - randomNumber2;
                     mathOperator = " - ";
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     result = randomNumber1 * randomNumber2;
                     mathOperator = " * ";
-                    break;
-                default:
+                }
+                default -> { }
             }
             gameData[i][0] = randomNumber1 + mathOperator + randomNumber2;
             gameData[i][1] = String.valueOf(result);
