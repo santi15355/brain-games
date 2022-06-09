@@ -9,8 +9,6 @@ import static hexlet.code.Utils.getRandomNumberFrom5to10;
 public class Calc {
     public static void calcGame() {
         int result = 0;
-        int answer = 0;
-        String question = "";
         String gameQuestion = "What is the result of the expression?";
         String[][] gameData = new String[ROUNDS][ROUNDS];
         for (var i = 0; i < ROUNDS; i++) {
