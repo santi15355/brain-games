@@ -8,8 +8,8 @@ public class Engine {
     public static void gameRun(String gameQuestion, String[][] gameData) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        Scanner plaerInput = new Scanner(System.in);
-        String name = plaerInput.next();
+        Scanner playerInput = new Scanner(System.in);
+        String name = playerInput.next();
         System.out.println("Hello, " + name + "!");
         System.out.println(gameQuestion);
         Scanner inputAnswer = new Scanner(System.in);
