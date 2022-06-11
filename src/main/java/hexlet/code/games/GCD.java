@@ -8,7 +8,7 @@ import static hexlet.code.Utils.getRandomNumberFrom1to99;
 public class GCD {
     public static void gcdGame() {
         String gameQuestion = "Find the greatest common divisor of given numbers.";
-        String[][] gameData = new String[ROUNDS][ROUNDS];
+        String[][] gameData = new String[ROUNDS][2];
         for (var i = 0; i < ROUNDS; i++) {
             int randomNumber1 = getRandomNumberFrom1to99();
             int randomNumber2 = getRandomNumberFrom1to99();

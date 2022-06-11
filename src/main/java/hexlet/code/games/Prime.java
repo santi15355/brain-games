@@ -8,7 +8,7 @@ import static hexlet.code.Utils.getRandomNumberFrom1to99;
 public class Prime {
     public static void primeGame() {
         String gameQuestion = "Answer 'yes' if the number is prime, otherwise answer 'no'.";
-        String[][] gameData = new String[ROUNDS][ROUNDS];
+        String[][] gameData = new String[ROUNDS][2];
         for (var i = 0; i < ROUNDS; i++) {
             var randomNumber = getRandomNumberFrom1to99();
             gameData[i][0] = String.valueOf(randomNumber);

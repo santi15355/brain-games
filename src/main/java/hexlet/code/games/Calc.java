@@ -11,7 +11,7 @@ public class Calc {
         int result = 0;
         String mathOperator = "";
         String gameQuestion = "What is the result of the expression?";
-        String[][] gameData = new String[ROUNDS][ROUNDS];
+        String[][] gameData = new String[ROUNDS][2];
         for (var i = 0; i < ROUNDS; i++) {
             int randomNumber1 = getRandomNumberFrom1to99();
             int randomNumber2 = getRandomNumberFrom5to10();

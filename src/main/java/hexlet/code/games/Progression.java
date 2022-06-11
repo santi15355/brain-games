@@ -10,7 +10,7 @@ public class Progression {
 
     public static void progressionGame() {
         String gameQuestion = "What number is missing in the progression?";
-        String[][] gameData = new String[ROUNDS][ROUNDS];
+        String[][] gameData = new String[ROUNDS][2];
         for (var i = 0; i < ROUNDS; i++) {
             var firstNumberOfProgression = getRandomNumberFrom1to99();
             var sizeOfProgression = getRandomNumberFrom5to10();
